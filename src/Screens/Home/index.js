@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react'
+import React, { useMemo, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 // actions
@@ -8,7 +8,6 @@ const Home = () => {
   // Redux
   const dispatch = useDispatch()
   const exampleLists = useSelector(state => state.exampleLists)
-
   useMemo (() => {
     dispatch(exampleGetLists())
   }, []) 

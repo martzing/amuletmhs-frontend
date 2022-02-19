@@ -12,7 +12,6 @@ import Layout from '../Layout'
 
 // Screens
 import Home from '../Screens/Home'
-import Main from '../Screens/Main'
 
 
 const AppRoutes = () => {
@@ -21,7 +20,6 @@ const AppRoutes = () => {
       <Layout>
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route exact path="/main" element={<Main />} />
         </Routes>
       </Layout>
     </BrowserRouter>

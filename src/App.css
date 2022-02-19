@@ -1,4 +1,4 @@
-.App {
+.app {
     display: flex;
     width: 100%;
     align-items: stretch;
@@ -26,7 +26,7 @@ a:focus {
 .sidebar {
   min-width: 250px;
   max-width: 250px;
-  background: #7386D5;
+  background: #1478a7;
   color: #fff;
   margin-left: -250px;
   transition: all 0.5s;
@@ -39,9 +39,11 @@ a:focus {
 
 
 .sidebar-header {
-  background: #6d7fcc;
+  background: #1478a7;
 }
-
+.nav-link {
+  color: #fff;
+}
 .sidebar-header h3{
   color: #fff;
   padding: 1em;
@@ -53,18 +55,22 @@ a:focus {
 }
 
 .menu-open {
-  background: #6d7fcc;
+  background: #056998;
 }
 
 .nav-item:hover {
-  background: #6d7fcc;
-    /* color: #7386D5; */
-    /* background: #fff; */
+  color: #056998;
+  background: #fff;
+}
+
+.nav-link:hover, .nav-link:focus {
+  color: #056998;
+  background: #fff;
 }
 
 .items-menu {
   color: #fff;
-  background: #6d7fcc;
+  background: #056998;
 }
 
 li a.dropdown-toggle::after {
@@ -83,13 +89,47 @@ li a.dropdown-toggle::after {
     display: none;
 }
 
+.user-menu, .user-menu:focus, .user-menu:hover {
+  color: #565e64 !important;
+  background-color: #fff !important;
+  border-color: #fff !important;
+  box-shadow: none !important;
+}
+
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */
 .content {
-  padding: 20px;
   margin-left: 0;
+  padding: 0;
   height: 100vh;
+}
+
+
+.toggle-side-bar {
+  background-image: url('./../public/toggle-btn.svg');
+}
+.toggle-side-bar-btn {
+  padding: .25rem .75rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  transition: box-shadow .15s ease-in-out;
+  color: rgba(0,0,0,.55);
+  border-color: rgba(0,0,0,.1);
+  box-shadow: none !important;
+}
+
+.breadcrumb-box {
+  border-bottom: 1px #565e64 solid;
+}
+
+.inner-content {
+  padding: 3%;
+  /* margin-left: 5px;
+  margin-right: 5px; */
 }
 
 @media only screen and (max-width: 576px) {
@@ -116,11 +156,5 @@ li a.dropdown-toggle::after {
         display: inline-block;
         position: relative;
         left: 68%;
-    }
-
-    .navbar {
-      margin-top: -20px;
-      margin-left: -20px;
-      margin-right: -20px;
     }
 }

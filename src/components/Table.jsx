@@ -18,7 +18,7 @@ const MyTable = ({ data }) => {
       <tbody>
         {
           data.map((num) => (
-            <tr>
+            <tr key={num}>
               <th scope="row">{num}</th>
               <td>Table cell</td>
               <td>Table cell</td>

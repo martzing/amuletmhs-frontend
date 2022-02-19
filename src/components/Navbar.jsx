@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
-import { Navbar, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap'
+import { Navbar, Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Button } from 'reactstrap'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAlignJustify } from '@fortawesome/free-solid-svg-icons'
 
 const NavBar = ({ toggle: sideBarToggle }) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -12,9 +14,7 @@ const NavBar = ({ toggle: sideBarToggle }) => {
 
   return (
     <Navbar color="light" light className="navbar shadow-sm p-3 bg-white" expand="md">
-      <button style={{ display: 'inline-block' }} type="button" class="navbar-toggler" onClick={sideBarToggle}>
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <Button className='toggle-side-bar-btn' onClick={sideBarToggle}><FontAwesomeIcon icon={faAlignJustify} /></Button>
       <Dropdown isOpen={isOpen} toggle={dropDownToggle}>
         <DropdownToggle className='user-menu' caret>{`${username}`.toLocaleUpperCase()}</DropdownToggle>
         <DropdownMenu>

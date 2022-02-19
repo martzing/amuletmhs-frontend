@@ -37,9 +37,15 @@ a:focus {
   transition: .5s;
 }
 
+.close-side-bar-btn {
+  display: none;
+}
+
 
 .sidebar-header {
   background: #1478a7;
+  display: inline-flex;
+  width: 100%;
 }
 .nav-link {
   color: #fff;
@@ -105,31 +111,45 @@ li a.dropdown-toggle::after {
   height: 100vh;
 }
 
-
-.toggle-side-bar {
-  background-image: url('./../public/toggle-btn.svg');
-}
 .toggle-side-bar-btn {
-  padding: .25rem .75rem;
-  font-size: 1.25rem;
-  line-height: 1;
-  background-color: transparent;
-  border: 1px solid transparent;
-  border-radius: .25rem;
-  transition: box-shadow .15s ease-in-out;
-  color: rgba(0,0,0,.55);
-  border-color: rgba(0,0,0,.1);
-  box-shadow: none !important;
+  line-height: 1.2;
+  background-color: #fff;
+  color: #056998;
+  border-color: #056998;
+}
+.toggle-side-bar-btn:hover, .toggle-side-bar-btn:focus {
+  line-height: 1.2;
+  background-color: #056998;
+  color: #fff;
+  border-color: #056998;
 }
 
 .breadcrumb-box {
-  border-bottom: 1px #565e64 solid;
+  border-bottom: 2px #565e64 solid;
+  display: inline-flex;
+  width: 100%;
 }
 
 .inner-content {
   padding: 3%;
   /* margin-left: 5px;
   margin-right: 5px; */
+}
+
+.offcanvas-btn {
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+  margin-bottom: 5px;
+  color: #056998;
+  background: #fff;
+  border-color: #056998;
+}
+
+.offcanvas-btn:hover, .offcanvas-btn:focus {
+  background: #056998;
+  color: #fff;
+  border-color: #056998;
 }
 
 @media only screen and (max-width: 576px) {
@@ -150,6 +170,13 @@ li a.dropdown-toggle::after {
 
     .sidebar.is-open > .sidebar-header a{
       display: unset;
+    }
+
+    .close-side-bar-btn {
+      display: block;
+      margin-left: auto;
+      margin-right: 20px;
+      margin-top: 20px;
     }
 
     li a.dropdown-toggle::after {

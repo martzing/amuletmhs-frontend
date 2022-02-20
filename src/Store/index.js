@@ -5,7 +5,7 @@ import reducers from '../Reducers'
 
 export default function storeConfig(initialState) {
   let middlewares = []
-  if (process.env.REACT_APP_RUN_ON === 'production') {
+  if (process.env.NODE_ENV === 'production') {
     middlewares = [thunkMiddleware]
   } else {
     middlewares = [thunkMiddleware, createLogger()]

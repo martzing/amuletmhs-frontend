@@ -4,12 +4,12 @@ import { Container, Button } from 'reactstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 
-import SideBar from '../../Components/SideBar'
-import NavBar from '../../Components/Navbar'
-import Table from '../../Components/Table'
-import Pagination from '../../Components/Pagination'
-import Breadcrumb from '../../Components/Breadcrumb'
-import CreateBoard from '../../Components/CreateBoard'
+import SideBar from './../../components/SideBar'
+import NavBar from './../../components/Navbar'
+import Table from './../../components/Table'
+import Pagination from './../../components/Pagination'
+import Breadcrumb from './../../components/Breadcrumb'
+import CreateBoard from './../../components/CreateBoard'
 
 
 const Home = () => {

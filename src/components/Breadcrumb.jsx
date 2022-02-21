@@ -4,10 +4,11 @@ import { Breadcrumb, BreadcrumbItem } from 'reactstrap'
 const MyBreadcrumb = ({ data }) => {
   return (
     <Breadcrumb listTag="div">
-      <BreadcrumbItem href="#" tag="a">Home</BreadcrumbItem>
-      <BreadcrumbItem href="#" tag="a">Library</BreadcrumbItem>
-      <BreadcrumbItem href="#" tag="a">Data</BreadcrumbItem>
-      <BreadcrumbItem active tag="span">Bootstrap</BreadcrumbItem>
+      {
+        data.map((val) => (
+          <BreadcrumbItem active={val.isActive} key={val.key} href={val.link} tag="a">{val.name}</BreadcrumbItem>
+        ))
+      }
     </Breadcrumb>
   )
 }

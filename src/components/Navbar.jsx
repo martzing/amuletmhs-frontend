@@ -14,7 +14,7 @@ const NavBar = ({ toggle: sideBarToggle }) => {
 
   return (
     <Navbar color="light" light className="navbar shadow-sm p-3 bg-white" expand="md">
-      <Button className='toggle-side-bar-btn' onClick={sideBarToggle}><FontAwesomeIcon icon={faAlignJustify} /></Button>
+      <Button color='primary' outline onClick={sideBarToggle}><FontAwesomeIcon icon={faAlignJustify} /></Button>
       <Dropdown isOpen={isOpen} toggle={dropDownToggle}>
         <DropdownToggle className='user-menu' caret>{`${username}`.toLocaleUpperCase()}</DropdownToggle>
         <DropdownMenu>

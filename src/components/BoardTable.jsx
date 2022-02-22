@@ -1,8 +1,10 @@
 import React from 'react'
-import { Table } from 'reactstrap'
+import { Table, Button } from 'reactstrap'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEdit } from '@fortawesome/free-solid-svg-icons'
 import Moment from 'moment'
 
-const MyTable = ({ data }) => {
+const BoardTable = ({ data, toggle }) => {
   return (
     <Table responsive>
       <thead>
@@ -13,18 +15,20 @@ const MyTable = ({ data }) => {
           <th>Ticket Price</th>
           <th>Total Ticket</th>
           <th>Created at</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
         {
           (data) ? data.map((val) => (
-            <tr key={val.id} onClick={() => { window.location = 'http://localhost:3000' }} style={{ cursor: 'pointer' }}>
+            <tr key={val.id} style={{ cursor: 'pointer' }}>
               <th scope="row">{val.id}</th>
               <td>{val.name}</td>
               <td>{val.cost}</td>
               <td>{val.ticket_price}</td>
               <td>{val.total_ticket}</td>
               <td>{Moment(val.created_at).format('YYYY-MM-DD')}</td>
+              <td><Button color='primary' onClick={() => { toggle(val) }} outline><FontAwesomeIcon icon={faEdit} /></Button></td>
             </tr>)) : null
         }
       </tbody>
@@ -32,4 +36,4 @@ const MyTable = ({ data }) => {
   )
 }
 
-export default MyTable
+export default BoardTable

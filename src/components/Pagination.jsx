@@ -11,11 +11,6 @@ const MyPagination = ({ data }) => {
       <PaginationItem><PaginationLink href="#">3</PaginationLink></PaginationItem>
       <PaginationItem><PaginationLink href="#">4</PaginationLink></PaginationItem>
       <PaginationItem><PaginationLink href="#">5</PaginationLink></PaginationItem>
-      <PaginationItem><PaginationLink href="#">6</PaginationLink></PaginationItem>
-      <PaginationItem><PaginationLink href="#">7</PaginationLink></PaginationItem>
-      <PaginationItem><PaginationLink href="#">8</PaginationLink></PaginationItem>
-      <PaginationItem><PaginationLink href="#">9</PaginationLink></PaginationItem>
-      <PaginationItem><PaginationLink href="#">10</PaginationLink></PaginationItem>
       <PaginationItem><PaginationLink href="#" next /></PaginationItem>
       <PaginationItem><PaginationLink href="#" last /></PaginationItem>
     </Pagination>

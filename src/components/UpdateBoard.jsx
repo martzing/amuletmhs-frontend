@@ -13,7 +13,7 @@ import {
 
 import { updateBoard } from './../Actions/Board'
 
-const CreateBoard = ({ isOpen, toggle }) => {
+const UpdateBoard = ({ isOpen, toggle }) => {
   const { data } = useSelector(state => state.requestUpdateBoard)
   const [boardId, setBoardId] = useState(data.boardId)
   const [name, setName] = useState(data.name)
@@ -129,4 +129,4 @@ const CreateBoard = ({ isOpen, toggle }) => {
   )
 }
 
-export default CreateBoard
+export default UpdateBoard

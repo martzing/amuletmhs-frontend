@@ -2,7 +2,6 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faHome,
-  faBriefcase,
   faPaperPlane,
   faQuestion,
   faImage,
@@ -21,18 +20,8 @@ const SideBar = ({ toggle, isOpen }) => {
         <FontAwesomeIcon className='close-side-bar-btn' onClick={toggle} icon={faXmark} />
       </div>
       <Nav vertical>
-        <SubMenu
-          title='Board'
-          icon={faHome}
-          items={[
-            { key: 1, name: 'Home 1', link: 'http://localhost:3000' },
-            { key: 2, name: 'Home 2', link: 'http://localhost:3000' },
-            { key: 3, name: 'Home 3', link: 'http://localhost:3000' },
-            { key: 4, name: 'Home 4', link: 'http://localhost:3000' },
-          ]}
-        />
         <NavItem>
-          <NavLink href='#'><FontAwesomeIcon icon={faBriefcase} style={{ marginRight: 5 }} />About</NavLink>
+          <NavLink href='http://localhost:3000'><FontAwesomeIcon icon={faHome} style={{ marginRight: 5 }} />Board</NavLink>
         </NavItem>
         <SubMenu
           title='Pages'

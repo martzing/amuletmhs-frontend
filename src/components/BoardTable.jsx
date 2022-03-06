@@ -21,9 +21,9 @@ const BoardTable = ({ data, toggle }) => {
       <tbody>
         {
           (data) ? data.map((val) => (
-            <tr key={val.id} style={{ cursor: 'pointer' }}>
+            <tr key={val.id}>
               <th scope="row">{val.id}</th>
-              <td>{val.name}</td>
+              <td style={{ cursor: 'pointer' }} onClick={() => window.location.href = `http://localhost:3000/item?board_id=${val.id}`}>{val.name}</td>
               <td>{val.cost}</td>
               <td>{val.ticket_price}</td>
               <td>{val.total_ticket}</td>

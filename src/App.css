@@ -164,6 +164,12 @@ li a.dropdown-toggle::after {
     }
 }
 
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 80% !important;
+  }
+}
+
 .offcanvas-btn-group {
   float:right
 }

@@ -78,13 +78,25 @@ export const updateBoard = ({ boardId, name, cost, ticketPrice, totalTicket }) =
   return async (dispatch) => {
     dispatch({ type: UPDATE_BOARD_LIST })
     try {
-      const body = JSON.stringify({
+      const body = {
         board_id: boardId,
         name,
         cost,
         ticket_price: ticketPrice,
         total_ticket: totalTicket,
-      })
+      }
+      if ((name !== null || name !== undefined) && name !== '') {
+        body.name = name
+      }
+      if ((cost !== null || cost !== undefined) && cost !== '') {
+        body.cost = cost
+      }
+      if ((ticketPrice !== null || ticketPrice !== undefined) && ticketPrice !== '') {
+        body.ticket_price = ticketPrice
+      }
+      if ((totalTicket !== null || totalTicket !== undefined) && totalTicket !== '') {
+        body.total_ticket = totalTicket
+      }
       const options = {
         method: 'patch',
         url: 'http://localhost:9000/v1/board',

@@ -9,7 +9,6 @@ import SideBar from './../../components/SideBar'
 import NavBar from './../../components/Navbar'
 import Table from './../../components/BoardTable'
 import Pagination from './../../components/Pagination'
-import Breadcrumb from './../../components/Breadcrumb'
 import CreateBoard from './../../components/CreateBoard'
 import UpdateBoard from './../../components/UpdateBoard'
 
@@ -17,12 +16,6 @@ import { getBoardList, requestUpdateBoard } from './../../Actions/Board'
 
 
 const Home = () => {
-  // const initUpdate = {
-  //   name: '',
-  //   cost: 0,
-  //   ticketPrice: 0,
-  //   totalTicket: 0,
-  // }
   const initOpen = (window.innerWidth > 576) ? true : false
   const [isOpen, setIsOpen] = useState(initOpen)
   const [isCreateBoard, setIsCreateBoard] = useState(false)
@@ -61,14 +54,6 @@ const Home = () => {
   for (let i = 1; i <= 12; i++) {
     amount.push(i)
   }
-  const breadcrumbData = [
-    {
-      name: 'Board',
-      link: 'http://localhost:3000',
-      key: 1,
-      isActive: false,
-    }
-  ]
   return (
     <div className="app">
       <SideBar toggle={toggle} isOpen={isOpen} />
@@ -76,7 +61,6 @@ const Home = () => {
         <NavBar toggle={toggle} />
         <div className='inner-content'>
           <div className='breadcrumb-box'>
-            <Breadcrumb data={breadcrumbData} />
             <Button color='primary' outline className='offcanvas-btn' onClick={toggleCreateBoard}><FontAwesomeIcon icon={faPlus} /></Button>
           </div>
           <Table toggle={openUpdateBoard} data={boardList} />

@@ -11,7 +11,8 @@ import {
 import Layout from '../Layout'
 
 // Screens
-import Home from '../Screens/Home'
+import Home from './../Screens/Home'
+import BoardItem from './../Screens/Board-Item'
 
 
 const AppRoutes = () => {
@@ -20,6 +21,7 @@ const AppRoutes = () => {
       <Layout>
         <Routes>
           <Route exact path="/" element={<Home />} />
+          <Route exact path="/item" element={<BoardItem />} />
         </Routes>
       </Layout>
     </BrowserRouter>
